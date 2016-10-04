@@ -203,7 +203,7 @@ class RandomizedGridSeach(object):
 
     def boxplot_parameters(self, display_train=False):
         """Plot boxplot for each parameters independently"""
-        import pylab as pl
+        import matplotlib.pyplot as pl 
         results = [Evaluation(*task.get())
                    for task_group in self.task_groups
                    for task in task_group
