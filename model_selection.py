@@ -6,8 +6,8 @@ Licensed: Simplified BSD
 from collections import namedtuple
 import os
 
-from IPython.parallel import interactive
-from IPython.parallel import TaskAborted
+from ipyparallel import interactive
+from ipyparallel import TaskAborted
 from scipy.stats import sem
 import numpy as np
 
@@ -229,10 +229,10 @@ class RandomizedGridSeach(object):
             offset = 0
             if display_train:
                 offset = 0.175
-                pl.boxplot(train_scores_per_value, widths=widths,
+                pl.boxplot(train_scores_per_value, widths=widths,showmeans = True,
                     positions=positions - offset)
 
-            pl.boxplot(val_scores_per_value, widths=widths,
+            pl.boxplot(val_scores_per_value, , widths=widths, showmeans = True,
                 positions=positions + offset)
 
             pl.xticks(np.arange(len(param_values)) + 1, param_values)
